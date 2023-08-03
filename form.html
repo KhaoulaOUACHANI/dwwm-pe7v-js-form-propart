@@ -10,11 +10,11 @@
     <section id="forms">
         <form id="choice_form">
             <div>
-                <input type="checkbox" id="civilian" name="civilian">
+                <input type="radio" id="civilian" name="civilian">
                 <label for="civilian">particulier</label>
             </div>
             <div>
-                <input type="checkbox" id="profesional" name="profesional">
+                <input type="radio" id="profesional" name="profesional">
                 <label for="profesional">professionnel</label>
             </div>
 
@@ -28,47 +28,53 @@
                 <input type="text" id="lastname" name="lastname">
                 <label for="lastname">Nom</label>
             </div>
-            <div>
-                <input type="text" id="man" name="man">
-                <label for="man">Homme</label>
-            </div>
-            <div>
-                <input type="text" id="woman" name="woman">
-                <label for="woman">Femme</label>
-            </div>
+            <section id="human">
+                <div>
+                    <input type="text" id="man" name="man">
+                    <label for="man">Homme</label>
+                </div>
+                <div>
+                    <input type="text" id="woman" name="woman">
+                    <label for="woman">Femme</label>
+                </div>
+            </section>
             <div>
                 <input type="email" id="email" name="email">
                 <label for="email">E-mail</label>
             </div>
-            <div>
+            <section id="complete_adress">
                 <div>
                     <input type="text" id="adress" name="adress">
                     <label for="adress">Adresse</label>
                 </div>
                 <div>
-                    <input type="" id="" name="">
-                    <label for=""></label>
+                    <input type="text" id="postal_code" name="postal_code" minlength="5" maxlength="5">
+                    <label for="postal_code">Code Postal</label>
                 </div>
                 <div>
-                    <input type="" id="" name="">
-                    <label for=""></label>
+                    <input type="text" id="city" name="city">
+                    <label for="city">Ville</label>
                 </div>
+            </section>
+            <div>
+                <input type="tel" id="_house_phone_number" name="house_phone_number">
+                <label for="house_phone_number">Numéro de téléphone fixe</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="tel" id="cellphone" name="cellphone">
+                <label for="cellphone">Numéro de téléphone portable</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="text" id="date_of_birth" name="date_of_birth">
+                <label for="date_of_birth">Date de naissance</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="cgv" name="cgv">
+                <label for="cgv">Conditions Générales de Vente</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="commercial communications" name="commercial communications">
+                <label for="commercial communications">Communication Commerciales</label>
             </div>
 
 
