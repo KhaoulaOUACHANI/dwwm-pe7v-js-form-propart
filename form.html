@@ -8,7 +8,7 @@
 </head>
 <body>
     <section id="forms">
-        <form id="choice_form">
+        <form id="choice_form"> <!--choisir particulier ou professionnel-->
             <fieldset>
                 <legend>Sélectionner votre compte :</legend>
             
@@ -23,8 +23,7 @@
                 </div>
             </fieldset>
         </form>
-
-        <form id="civilian_form">
+        <form id="civilian_form"><!--formulaire pour particulier-->
             <div>
                 <input type="text" id="name" name="name">
                 <label for="name">Prénom</label>
@@ -33,21 +32,27 @@
                 <input type="text" id="lastname" name="lastname">
                 <label for="lastname">Nom</label>
             </div>
-            <section id="human">
-                <div>
-                    <input type="text" id="man" name="man">
-                    <label for="man">Homme</label>
-                </div>
-                <div>
-                    <input type="text" id="woman" name="woman">
-                    <label for="woman">Femme</label>
-                </div>
-            </section>
+            <div>
+                <label for="human">Genre</label>
+                <select name="human" id="human">
+                    <option value="">Choississez votre genre</option>
+                    <option value="femme">femme</option>
+                    <option value="homme">homme</option>
+                    <option value="non-binaire">non-binaire</option>
+                    <option value="genre fluide">genre fluide</option>
+                    <option value="genrequeer">genrequeer</option>
+                    <option value="bigenre">bigenre</option>
+                    <option value="agender">agender</option>
+                    <option value="trigender">trigender</option>
+                    <option value="genderqueer">genderqueer</option>
+                    <option value="genderfluid">genderfluid</option>
+                </select>
+            </div>
             <div>
                 <input type="email" id="email" name="email">
                 <label for="email">E-mail</label>
             </div>
-            <section id="complete_adress">
+            <section id="complete_adress"><!-- Pour indiquer l'adresse complète de la personne-->
                 <div>
                     <label for="adress">Adresse</label>
                     <textarea id="adress" name="adress">Votre adresse ici</textarea>
@@ -70,7 +75,7 @@
                 <label for="cellphone">Numéro de téléphone portable</label>
             </div>
             <div>
-                <input type="text" id="date_of_birth" name="date_of_birth">
+                <input type="date" id="date_of_birth" name="date_of_birth">
                 <label for="date_of_birth">Date de naissance</label>
             </div>
             <div>
@@ -81,40 +86,52 @@
                 <input type="checkbox" id="commercial communications" name="commercial communications">
                 <label for="commercial communications">Communication Commerciales</label>
             </div>
+            <input type="submit">
         </form>
-        <form id="profesional_form">
+        <form id="profesional_form"><!-- formulaire pour professionnel-->
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="text" id="social" name="social">
+                <label for="social">Raison sociale</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="number" id="siret_siren" name="siret_siren" minlength="9" maxlength="14">
+                <label for="siret_siren">Numéro de SIREN/SIRET</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="email" id="profesional_email" name="profesional_email">
+                <label for="profesional_email">Email Profesionnel</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="tel" id="profesional_phone_number" name="profesional_phone_number">
+                <label for="profesional_phone_number">Numéro de téléphone professionnel</label>
+            </div>
+            <section id="complete_profesional_adress"><!-- Pour indiquer l'adresse complète de l'entreprise'-->
+                <div>
+                    <label for="profesional_adress">Adresse de votre entreprise</label>
+                    <textarea id="profesional_adress" name="profesional_adress">Votre adresse professionnelle ici</textarea>
+                </div>
+                <div>
+                    <input type="text" id="profesional_postal_code" name="profesional_postal_code" minlength="5" maxlength="5">
+                    <label for="profesional_postal_code">Code Postal de votre entreprise</label>
+                </div>
+                <div>
+                    <input type="text" id="_profesional_city" name="_profesional_city">
+                    <label for="_profesional_city">Siège de votre entreprise</label>
+                </div>
+            </section>
+            <div>
+                <input type="number" id="tva" name="tva">
+                <label for="tva">Numéro de TVA intracommunautaire</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="cgv" name="cgv">
+                <label for="cgv">Conditions Générales de Vente</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="commercial communications" name="commercial communications">
+                <label for="commercial communications">Communication Commerciales</label>
             </div>
-            <div>
-                <input type="" id="" name="">
-                <label for=""></label>
-            </div>
-            <div>
-                <input type="" id="" name="">
-                <label for=""></label>
-            </div>
+            <input type="submit">
 
         </form>
     </section>
