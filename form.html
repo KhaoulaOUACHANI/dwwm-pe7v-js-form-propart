@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./main.js"></script>
 </head>
 <body>
     <section id="forms">
-        <form id="choice_form">
-            <div>
-                <input type="checkbox" id="civilian" name="civilian">
-                <label for="civilian">particulier</label>
-            </div>
-            <div>
-                <input type="checkbox" id="profesional" name="profesional">
-                <label for="profesional">professionnel</label>
-            </div>
-
+        <form id="choice_form"> <!--choisir particulier ou professionnel-->
+            <fieldset>
+                <legend>Sélectionner votre compte :</legend>
+            
+                <div>
+                    <input type="radio" id="civilian" name="choice" value="civilian" checked />
+                    <label for="civilian">Particulier</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="profesional" name="choice" value="profesional" />
+                    <label for="profesional">Professionnel</label>
+                </div>
+            </fieldset>
         </form>
-        <form id="civilian_form">
+        <form id="civilian_form"><!--formulaire pour particulier-->
             <div>
                 <input type="text" id="name" name="name">
                 <label for="name">Prénom</label>
@@ -28,83 +33,105 @@
                 <label for="lastname">Nom</label>
             </div>
             <div>
-                <input type="text" id="man" name="man">
-                <label for="man">Homme</label>
-            </div>
-            <div>
-                <input type="text" id="woman" name="woman">
-                <label for="woman">Femme</label>
+                <label for="human">Genre</label>
+                <select name="human" id="human">
+                    <option value="">Choississez votre genre</option>
+                    <option value="femme">femme</option>
+                    <option value="homme">homme</option>
+                    <option value="non-binaire">non-binaire</option>
+                    <option value="genre fluide">genre fluide</option>
+                    <option value="genrequeer">genrequeer</option>
+                    <option value="bigenre">bigenre</option>
+                    <option value="agender">agender</option>
+                    <option value="trigender">trigender</option>
+                    <option value="genderqueer">genderqueer</option>
+                    <option value="genderfluid">genderfluid</option>
+                </select>
             </div>
             <div>
                 <input type="email" id="email" name="email">
                 <label for="email">E-mail</label>
             </div>
-            <div>
+            <section id="complete_adress"><!-- Pour indiquer l'adresse complète de la personne-->
                 <div>
-                    <input type="text" id="adress" name="adress">
                     <label for="adress">Adresse</label>
+                    <textarea id="adress" name="adress">Votre adresse ici</textarea>
                 </div>
                 <div>
-                    <input type="" id="" name="">
-                    <label for=""></label>
+                    <input type="text" id="postal_code" name="postal_code" minlength="5" maxlength="5">
+                    <label for="postal_code">Code Postal</label>
                 </div>
                 <div>
-                    <input type="" id="" name="">
-                    <label for=""></label>
+                    <input type="text" id="city" name="city">
+                    <label for="city">Ville</label>
                 </div>
+            </section>
+            <div>
+                <input type="tel" id="_house_phone_number" name="house_phone_number">
+                <label for="house_phone_number">Numéro de téléphone fixe</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="tel" id="cellphone" name="cellphone">
+                <label for="cellphone">Numéro de téléphone portable</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="date" id="date_of_birth" name="date_of_birth">
+                <label for="date_of_birth">Date de naissance</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="cgv" name="cgv">
+                <label for="cgv">Conditions Générales de Vente</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="commercial communications" name="commercial communications">
+                <label for="commercial communications">Communication Commerciales</label>
             </div>
-
-
+            <input type="submit">
         </form>
-        <form id="profesional_form">
+        <form id="profesional_form"><!-- formulaire pour professionnel-->
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="text" id="social" name="social">
+                <label for="social">Raison sociale</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="number" id="siret_siren" name="siret_siren" minlength="9" maxlength="14">
+                <label for="siret_siren">Numéro de SIREN/SIRET</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="email" id="profesional_email" name="profesional_email">
+                <label for="profesional_email">Email Profesionnel</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="tel" id="profesional_phone_number" name="profesional_phone_number">
+                <label for="profesional_phone_number">Numéro de téléphone professionnel</label>
+            </div>
+            <section id="complete_profesional_adress"><!-- Pour indiquer l'adresse complète de l'entreprise'-->
+                <div>
+                    <label for="profesional_adress">Adresse de votre entreprise</label>
+                    <textarea id="profesional_adress" name="profesional_adress">Votre adresse professionnelle ici</textarea>
+                </div>
+                <div>
+                    <input type="text" id="profesional_postal_code" name="profesional_postal_code" minlength="5" maxlength="5">
+                    <label for="profesional_postal_code">Code Postal de votre entreprise</label>
+                </div>
+                <div>
+                    <input type="text" id="_profesional_city" name="_profesional_city">
+                    <label for="_profesional_city">Siège de votre entreprise</label>
+                </div>
+            </section>
+            <div>
+                <input type="number" id="tva" name="tva">
+                <label for="tva">Numéro de TVA intracommunautaire</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="professional_cgv" name="cgv">
+                <label for="cgv">Conditions Générales de Vente</label>
             </div>
             <div>
-                <input type="" id="" name="">
-                <label for=""></label>
+                <input type="checkbox" id="professional_commercial communications" name="commercial communications">
+                <label for="commercial communications">Communication Commerciales</label>
             </div>
-            <div>
-                <input type="" id="" name="">
-                <label for=""></label>
-            </div>
-            <div>
-                <input type="" id="" name="">
-                <label for=""></label>
-            </div>
+            <input type="submit">
 
         </form>
     </section>
