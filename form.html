@@ -9,16 +9,21 @@
 <body>
     <section id="forms">
         <form id="choice_form">
-            <div>
-                <input type="radio" id="civilian" name="civilian">
-                <label for="civilian">particulier</label>
-            </div>
-            <div>
-                <input type="radio" id="profesional" name="profesional">
-                <label for="profesional">professionnel</label>
-            </div>
-
+            <fieldset>
+                <legend>Sélectionner votre compte :</legend>
+            
+                <div>
+                    <input type="radio" id="civilian" name="choice" value="civilian" checked />
+                    <label for="civilian">Particulier</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="profesional" name="choice" value="profesional" />
+                    <label for="profesional">Professionnel</label>
+                </div>
+            </fieldset>
         </form>
+
         <form id="civilian_form">
             <div>
                 <input type="text" id="name" name="name">
@@ -44,8 +49,8 @@
             </div>
             <section id="complete_adress">
                 <div>
-                    <input type="text" id="adress" name="adress">
                     <label for="adress">Adresse</label>
+                    <textarea id="adress" name="adress">Votre adresse ici</textarea>
                 </div>
                 <div>
                     <input type="text" id="postal_code" name="postal_code" minlength="5" maxlength="5">
@@ -76,8 +81,6 @@
                 <input type="checkbox" id="commercial communications" name="commercial communications">
                 <label for="commercial communications">Communication Commerciales</label>
             </div>
-
-
         </form>
         <form id="profesional_form">
             <div>
